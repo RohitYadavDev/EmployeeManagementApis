@@ -1,4 +1,5 @@
 ﻿using DemoApis.Models;
+using DemoApis.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DemoApis.DBContext
@@ -7,6 +8,8 @@ namespace DemoApis.DBContext
     {
         public ApiDBContext(DbContextOptions<ApiDBContext> options) : base(options) { 
         }
+
+        public DbSet<Employee> Employees { get; set; }
 
     }
 }
