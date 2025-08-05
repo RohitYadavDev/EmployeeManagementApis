@@ -26,7 +26,7 @@ namespace DemoApis.Services
 
                 // Hash sensitive data
                 employeeModel.Password = Helpers.SecurityHelper.HashPassword(employeeModel.Password);
-                employeeModel.Username = employeeModel.Username.ToLower(); // Avoid hashing username unless required
+                employeeModel.Username = employeeModel.Username.ToLower(); //  hashing username unless required
 
                 // Call repository
                 return await _employeeRepository.RegisterEmployee(employeeModel);
